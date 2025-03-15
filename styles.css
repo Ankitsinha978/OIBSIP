@@ -1,0 +1,169 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0a0a0a;
+    color: white;
+    scroll-behavior: smooth;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    background-color: #111;
+    padding: 15px 20px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+    animation: slideDown 1s ease-in-out;
+}
+
+.nav-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: blue;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+}
+
+.nav-menu li {
+    margin: 0 15px;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: blue;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    position: relative;
+    animation: fadeIn 2s ease-in-out;
+    margin-top: 60px;
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.hero-img {
+    width: 300px;
+    height: auto;
+    position: absolute;
+    right: 15%;
+    top: 25%;
+    animation: fadeInRight 1.5s ease-in-out;
+}
+
+.resume-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: blue;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+    animation: bounce 2s infinite;
+}
+
+.resume-button:hover {
+    background: darkred;
+}
+
+.about {
+    padding: 50px;
+    text-align: center;
+    background: #111;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+.skills {
+    text-align: center;
+    padding: 50px 0;
+    background: #222;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.skills-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.skill {
+    width: 90px;
+    height: 90px;
+    background: blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    transition: transform 0.3s;
+    animation: zoomIn 1s ease-in-out;
+}
+
+.skill:hover {
+    transform: scale(1.1);
+}
+
+.contact {
+    padding: 50px;
+    text-align: center;
+    background: #222;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInRight {
+    from { opacity: 0; transform: translateX(30px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+@keyframes zoomIn {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
